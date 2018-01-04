@@ -1,0 +1,35 @@
+---
+profile::base::ntp_servers:
+ - renna.0
+ - kimba.1
+profile::base::config_file_owner: 'nobody'
+profile::apache::port: 80
+profile::apache::docroot_owner: 'root'
+
+#profile::nginx::ensure: 'present'
+#profile::nginx::package_name: 'nginx'
+#profile::nginx::config_dir: '/etc/nginx'
+#profile::nginx::config_ensure: 'file'
+nginx::config_mode: '0770'
+#profile::nginx::config_owner: 'root'
+#profile::nginx::config_group: 'root'
+#profile::nginx::config_confd: "${config_dir}/conf.d"
+nginx::config_log_dir: '/var/log/hutta'
+#profile::nginx::config_pid_file: '/run/nginx.pid'
+#profile::nginx::service_name: 'nginx'
+#profile::nginx::service_ensure: 'running'
+#profile::nginx::service_pattern: 'nginx'
+#profile::nginx::service_enable: true
+#profile::nginx::service_hasstatus: true
+#profile::nginx::service_hasrestart: true
+#profile::nginx::docroot: '/usr/share/nginx'
+#profile::nginx::vhosts:
+# - 'fqdn': 'shashiudawa5.mylabserver.com'
+#   'port': 80
+#   'server_aliases': ''
+# - 'fqdn': 'shashiudawa5b.mylabserver.com'
+#   'port': 80
+#   'server_aliases': 'shashiudawa5b1.mylabserver.com'
+wildfly::properties: {
+  'jboss.http.port': '80',
+}

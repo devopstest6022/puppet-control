@@ -22,8 +22,8 @@ mod "puppetlabs/java",        '1.6.0'
 #  :branch => 'docs_experiment'
 mod 'profile',
   :git => 'https://github.com/devopstest6022/puppet-profile.git',
-  :branch => 'development'
+  :branch => 'master'
 
 mod 'role',
   :git => 'https://github.com/devopstest6022/puppet-role.git',
-  :branch => 'development'
+  :branch => 'master'
